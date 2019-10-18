@@ -17,6 +17,7 @@ using Microsoft.Azure.SpatialAnchors;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using PuzzleAnchors.Common;
+using Acr.UserDialogs;
 
 namespace PuzzleAnchorsHunt.Droid
 {
@@ -179,22 +180,37 @@ namespace PuzzleAnchorsHunt.Droid
 
             this.cloudAnchorManager = new AzureSpatialAnchorsManager(this.sceneView.Session);
             this.cloudAnchorManager.OnAnchorLocated += (sender, args) =>
-                this.RunOnUiThread(() =>
+                this.RunOnUiThread(async () =>
                 {
-                    CloudSpatialAnchor anchor = args.Args.Anchor;
-                    LocateAnchorStatus status = args.Args.Status;
+                    var random = new Random();
+                    var firstNum = random.Next(1, 100);
+                    var secNum = random.Next(1, 100);
 
-                    if (status == LocateAnchorStatus.AlreadyTracked || status == LocateAnchorStatus.Located)
+                    var total = firstNum + secNum;
+
+                    var res = await UserDialogs.Instance.PromptAsync(new PromptConfig() { Title = "Puzzle Located!", Message = $"{firstNum} + {secNum} = ?", OkText = "OK" });
+
+                    if (res.Text.Trim() == total.ToString())
                     {
-                        AnchorVisual foundVisual = new AnchorVisual(anchor.LocalAnchor)
+                        CloudSpatialAnchor anchor = args.Args.Anchor;
+                        LocateAnchorStatus status = args.Args.Status;
+
+                        if (status == LocateAnchorStatus.AlreadyTracked || status == LocateAnchorStatus.Located)
                         {
-                            CloudAnchor = anchor
-                        };
-                        foundVisual.AnchorNode.SetParent(this.arFragment.ArSceneView.Scene);
-                        string cloudAnchorIdentifier = foundVisual.CloudAnchor.Identifier;
-                        foundVisual.SetColor(foundColor);
-                        foundVisual.Render(this.arFragment);
-                        this.anchorVisuals[cloudAnchorIdentifier] = foundVisual;
+                            AnchorVisual foundVisual = new AnchorVisual(anchor.LocalAnchor)
+                            {
+                                CloudAnchor = anchor
+                            };
+                            foundVisual.AnchorNode.SetParent(this.arFragment.ArSceneView.Scene);
+                            string cloudAnchorIdentifier = foundVisual.CloudAnchor.Identifier;
+                            foundVisual.SetColor(foundColor);
+                            foundVisual.Render(this.arFragment);
+                            this.anchorVisuals[cloudAnchorIdentifier] = foundVisual;
+                        }
+                    }
+                    else
+                    {
+                        this.textView.Text = "Wrong answer!";
                     }
                 });
 
@@ -204,7 +220,7 @@ namespace PuzzleAnchorsHunt.Droid
 
                 this.RunOnUiThread(() =>
                 {
-                    this.textView.Text = "Anchor located! Grab A Screenshot!";
+                    this.textView.Text = "Correct Answer! Grab A Screenshot!";
                     this.EnableCorrectUIControls();
                 });
             };
