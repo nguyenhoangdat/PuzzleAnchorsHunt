@@ -5,13 +5,17 @@ VisualStudioVersion = 16.0.29411.138
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{D3AC1230-1D40-427D-A41A-DF5D2803FDF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharingService", "SharingService\SharingService.csproj", "{C58B5381-E9B6-4C74-B5C1-290AB53097E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharingService", "SharingService\SharingService.csproj", "{C58B5381-E9B6-4C74-B5C1-290AB53097E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{2F455C33-6A8B-4307-BAD3-A05DD18045F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleAnchorsDrop", "PuzzleAnchorsDrop\PuzzleAnchorsDrop.csproj", "{E82071B4-FF0C-4471-BF1C-86635CBDA480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuzzleAnchors.Common", "PuzzleAnchors.Common\PuzzleAnchors.Common.csproj", "{45F01A25-7F6D-4C6C-B38F-07C898E6913F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleAnchors.Common", "PuzzleAnchors.Common\PuzzleAnchors.Common.csproj", "{45F01A25-7F6D-4C6C-B38F-07C898E6913F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Player", "Player", "{865E1807-E1D9-41A6-99D9-EE72EB9C7581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleAnchorsHunt.Droid", "PuzzleAnchorsHunt.Droid\PuzzleAnchorsHunt.Droid.csproj", "{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleAnchorsDrop.Droid", "PuzzleAnchorsDrop.Droid\PuzzleAnchorsDrop.Droid.csproj", "{E817400B-0061-4BFE-8BAE-E722B978ABE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,23 +27,30 @@ Global
 		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C58B5381-E9B6-4C74-B5C1-290AB53097E8} = {D3AC1230-1D40-427D-A41A-DF5D2803FDF4}
-		{E82071B4-FF0C-4471-BF1C-86635CBDA480} = {2F455C33-6A8B-4307-BAD3-A05DD18045F0}
+		{AA5EFE32-1292-47E8-AE3E-CA0398A5C8A0} = {865E1807-E1D9-41A6-99D9-EE72EB9C7581}
+		{E817400B-0061-4BFE-8BAE-E722B978ABE4} = {2F455C33-6A8B-4307-BAD3-A05DD18045F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86BA1D14-20C1-4015-BD1D-296306AA72CE}
