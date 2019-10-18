@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">PuzzleAnchorsDrop</string>
+  <string name="action_settings">Settings</string>
+  <string name="main_title_text">Puzzle Anchors Drop!</string>
+  <string name="main_basic_button_text">Start Droping Anchors!</string>
+  <string name="anchor_title_text"></string>
+  <string name="create_button_text">Create</string>
+  <string name="enter_anchor_text">Enter Anchor Description:</string>
+  <string name="anchor_number_text">Anchor Description</string>
+  <string name="back_button_text">Back</string>
+</resources>

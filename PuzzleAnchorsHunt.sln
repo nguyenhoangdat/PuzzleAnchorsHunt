@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.138
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{D3AC1230-1D40-427D-A41A-DF5D2803FDF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharingService", "SharingService\SharingService.csproj", "{C58B5381-E9B6-4C74-B5C1-290AB53097E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{2F455C33-6A8B-4307-BAD3-A05DD18045F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleAnchorsDrop", "PuzzleAnchorsDrop\PuzzleAnchorsDrop.csproj", "{E82071B4-FF0C-4471-BF1C-86635CBDA480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleAnchors.Common", "PuzzleAnchors.Common\PuzzleAnchors.Common.csproj", "{45F01A25-7F6D-4C6C-B38F-07C898E6913F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58B5381-E9B6-4C74-B5C1-290AB53097E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45F01A25-7F6D-4C6C-B38F-07C898E6913F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C58B5381-E9B6-4C74-B5C1-290AB53097E8} = {D3AC1230-1D40-427D-A41A-DF5D2803FDF4}
+		{E82071B4-FF0C-4471-BF1C-86635CBDA480} = {2F455C33-6A8B-4307-BAD3-A05DD18045F0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86BA1D14-20C1-4015-BD1D-296306AA72CE}
+	EndGlobalSection
+EndGlobal
